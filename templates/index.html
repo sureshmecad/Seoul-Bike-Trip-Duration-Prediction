@@ -19,18 +19,20 @@
 
 <body>
  <div class="login">
-	<h1>Predict Rented bikes in Seoul</h1>
+	<h1>Predict Bike trip Duration</h1>
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="Hour (0 to 24)" placeholder="Hour (0 to 24)" required="required" />
+    	<input type="text" name="Distance" placeholder="Distance" required="required" />
         <input type="text" name="Temperature (°C)" placeholder="Temperature (°C)" required="required" />
 		<input type="text" name="Humidity(%)" placeholder="Humidity(%)" required="required" />
 		<input type="text" name="Wind speed (m/s)" placeholder="Wind speed (m/s)" required="required" />
-		<input type="text" name="Visibility(m)" placeholder="Visibility(m)" required="required" />
+		<input type="text" name="Haversine" placeholder="Haversine" required="required" />
 		<input type="text" name="Solar radiation (MJ/m2)" placeholder="Solar radiation (MJ/m2)" required="required" />
-		<input type="text" name="Rainfall(mm)" placeholder="Rainfall(mm)" required="required" />
-		<input type="text" name="Snowfall(cm)" placeholder="Snowfall(cm)" required="required" />
-		<input type="text" name="month(1 to 12)" placeholder="month(1 to 12)" required="required" />
-		<input type="text" name=" WeekDay(1 to 7 : monday to Sunday)" placeholder=" WeekDay(1 to 7 : monday to Sunday)" required="required" />
+		<input type="text" name="PLong" placeholder="PLong" required="required" />
+		<input type="text" name="DLong" placeholder="DLong" required="required" />
+		<input type="text" name="Pmonth" placeholder="Pmonth" required="required" />
+		<input type="text" name="Phour" placeholder="Phour" required="required" />
+                <input type="text" name="Dmonth" placeholder="Dmonth" required="required" />
+		<input type="text" name="Dhour" placeholder="Dhour" required="required" />
 		
         <button type="submit" class="btn btn-primary btn-block btn-large">Launch the prediction</button>
     </form>
