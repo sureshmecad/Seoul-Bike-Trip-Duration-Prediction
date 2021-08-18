@@ -1,4 +1,4 @@
-# Data Analysis of Seoul Bike Demand
+## Predict Seoul Bike trip Duration
 
 ***
 
@@ -17,7 +17,7 @@ The studied **dataset** contains *weather* information which are the **features*
 
 The goal of the company Seoul Bike is providing the city with a stable supply of rental bikes. It becomes a major concern to keep user satisfied. The crucial part is the prediction of bike count rents at each hour for a stable supply of rental bikes. We can suppose that this study could be reported to the company **'Seoul Bikes'**. We think it could help them knowing if yes or not they have to supply bikes stations in the city, in order to keep a good satisfaction of the customers.
 
-You can find the dataset necessary for the analysis on following link : [https://archive.ics.uci.edu/ml/datasets/Seoul+Bike+Sharing+Demand#](https://archive.ics.uci.edu/ml/datasets/Seoul+Bike+Sharing+Demand#)
+You can find the dataset necessary for the analysis on following link : [https://md-datasets-cache-zipfiles-prod.s3.eu-west-1.amazonaws.com/gtfh9z865f-1.zip#](https://md-datasets-cache-zipfiles-prod.s3.eu-west-1.amazonaws.com/gtfh9z865f-1.zip#)
 <br>
 
 
@@ -28,8 +28,8 @@ You can find the dataset necessary for the analysis on following link : [https:/
   
  
 ## You will find in this repositery :   
-* A [LaTeX report of the study](https://github.com/thomastrg/SeoulBikeDemand_DataAnalysis/raw/main/Report.pdf)
-* The [Jupyter Notebook](https://github.com/thomastrg/SeoulBikeDemand_DataAnalysis/blob/main/final_project.ipynb)
+* A [LaTeX report of the study](//github.com/sureshmecad/Seoul-Bike-Trip-Duration-Prediction/blob/master/Project%202%20-%20Seoul%20Bike%20Trip%20Duration.pdf.pdf)
+* The [Jupyter Notebook](https://github.com/sureshmecad/Seoul-Bike-Trip-Duration-Prediction/blob/master/code/1_Seoul_Bike_Trip_Final.ipynb)
 * The transformation of the model into an API 
 <br> 
 
