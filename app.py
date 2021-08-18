@@ -4,7 +4,7 @@ import sklearn
 from flask import Flask,render_template,request,jsonify
 
 app = Flask(__name__)
-model = pickle.load(open('LGBM.pkl', 'lgbm'))
+model = pickle.load(open('LGBM.pkl', 'rb'))
 
 
 
