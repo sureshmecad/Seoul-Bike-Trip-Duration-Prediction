@@ -25,4 +25,7 @@ You can find the dataset necessary for the analysis on following link : [https:/
 ## Conclusion : 
 
 You can check below the result of the deployment of our Machine Learning model : LGBM(Light Gradient Regressor) which had the best score among the models.
+
+https://predictionofbiketripduration.herokuapp.com/
+
 ![logo](https://github.com/thomastrg/SeoulBikeDemand_DataAnalysis/blob/main/images/final.PNG)
