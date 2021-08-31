@@ -1,17 +1,17 @@
 import joblib
-from sklearn.ensemble import RandomForestClassifier
+from lightgbm import LGBMRegressor
 import os
 import numpy as np
 
 
 curr_path = os.path.dirname(os.path.realpath(__file__))
-rf = joblib.load(curr_path + '/model.joblib')
+LGBM = joblib.load(curr_path + '/model.joblib')
 
 
 def predict(attributes: np.array):
     
-    pred = rf.predict(attributes)
+    pred = LGBM.predict(attributes)
 
-    print("Malware Status Predicted")
+    print("BIKE TRIP PRICE Predicted")
 
     return pred[0]

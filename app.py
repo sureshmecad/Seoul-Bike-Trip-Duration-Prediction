@@ -5,7 +5,7 @@ import joblib
 import os
 import numpy as np
 
-st.set_page_config(page_title="ADROIT",
+st.set_page_config(page_title="SEOUL BIKE PRICE PREDICTION",
                    page_icon="📵", layout="wide")
 
 curr_path = os.path.dirname(os.path.realpath(__file__))
@@ -16,38 +16,33 @@ feature_cols = joblib.load(curr_path + "/features.joblib")
 with st.form("prediction_form"):
     st.header("Enter the Details about App")
 
-    Rating = st.number_input("Rating of APP: ")
-    NumberofRatings = st.number_input("Total Ratings: ", value=0, format="%d")
-    Price = st.number_input("App Price: ")
-    Safe = st.number_input("Number of safe permissions: ", value=0, format="%d")
-    Dangerous = st.number_input("Number of Dangerous permissions:", value=0, format="%d")
-    permission = st.multiselect("Permit the app:",
-                                feature_cols[5:35]) 
-    Category = st.selectbox("Permit the app:",
-                                feature_cols[35:])
-    submit_val = st.form_submit_button("Predict Malware")
-
+    Distance = st.number_input("Distance: ")
+    PLong = st.number_input("PLong: ")
+    DLong = st.number_input("DLong: ")
+    Haversine = st.number_input("Haversine: ")
+    Pmonth = st.number_input("Pmonth:")
+    Phour = st.number_input("Phour:") 
+    PDweek = st.number_input("PDweek:")
+    Dmonth = st.number_input("Dmonth")
+    Dhour = st.number_input("Dhour")
+    DDweek = st.number_input("DDweek")
+    Temp = st.number_input("Temp")
+    Wind = st.number_input("Wind")
+    Humid = st.number_input("Humid")
+    Solar = st.number_input("Solar")
+    GroundTemp = st.number_input("GroundTemp")
 
 
 if submit_val:
-    per_d = dict(zip(feature_cols[5:35],np.zeros(30)))
-    for p in permission:
-        per_d[p] = 1
-    permission = np.array(list(per_d.values()))
-    cat = dict(zip(feature_cols[35:], np.zeros(15)))
-    cat[Category] = 1
-    Category = np.array(list(cat.values()))
-
-    base_feats = np.array([Rating, NumberofRatings, Price, Dangerous, Safe])
-
-    attributes = np.concatenate([base_feats, permission, Category])
     
+    base_feats = np.array([Distance, PLong, DLong, Haversine, Pmonth, Phour, PDweek, Dmonth, Dhour, DDweek, Temp, Wind, Humid, Solar, GroundTemp])
+
+       
     print("attributes value")
 
     status = predict(attributes.reshape(1, -1))
 
-    if status:
-        st.error("The App is Malware")
-    else:
-        st.success("The App is Benign")
-        st.balloons()
+    int_feat = [int(x) for x in request.form.values()]
+    final_feat = [np.array(int_feat)]
+    prediction = model.predict(final_feat)
+    output = round(prediction[0],2)
