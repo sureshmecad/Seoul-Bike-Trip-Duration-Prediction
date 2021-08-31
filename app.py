@@ -31,6 +31,7 @@ with st.form("prediction_form"):
     Humid = st.number_input("Humid")
     Solar = st.number_input("Solar")
     GroundTemp = st.number_input("GroundTemp")
+    submit_val = st.form_submit_button("PREDICT")
 
 
 if submit_val:
