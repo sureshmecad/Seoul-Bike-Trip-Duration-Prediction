@@ -42,3 +42,7 @@ if submit_val:
     print("attributes value")
 
     status = predict(attributes.reshape(1, -1))
+    
+    if status>0:
+        st.success(f"The Distance is {status}")
+        st.balloons()
