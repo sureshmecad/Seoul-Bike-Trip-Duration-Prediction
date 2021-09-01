@@ -36,14 +36,9 @@ with st.form("prediction_form"):
 
 if submit_val:
     
-    base_feats = np.array([Distance, PLong, DLong, Haversine, Pmonth, Phour, PDweek, Dmonth, Dhour, DDweek, Temp, Wind, Humid, Solar, GroundTemp])
+    attributes = np.array([Distance, PLong, DLong, Haversine, Pmonth, Phour, PDweek, Dmonth, Dhour, DDweek, Temp, Wind, Humid, Solar, GroundTemp])
 
        
     print("attributes value")
 
     status = predict(attributes.reshape(1, -1))
-
-    int_feat = [int(x) for x in request.form.values()]
-    final_feat = [np.array(int_feat)]
-    prediction = model.predict(final_feat)
-    output = round(prediction[0],2)
